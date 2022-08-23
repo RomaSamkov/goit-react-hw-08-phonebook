@@ -7,7 +7,7 @@ import Header from 'components/Header';
 import PrivateRoute from 'components/PrivateRoute';
 import PublicRoute from 'components/PublicRoute';
 // import { Box } from 'components/Box';
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 const HomePage = lazy(() => import('pages/HomePage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -66,7 +66,7 @@ const App = () => {
             <Route path={routesPath.unknown} element={<PageNotFound />} />
           </Route>
         </Routes>
-        {/* <Toaster
+        <Toaster
           toastOptions={{
             error: {
               style: {
@@ -85,7 +85,7 @@ const App = () => {
               },
             },
           }}
-        /> */}
+        />
       </Suspense>
     </>
   );

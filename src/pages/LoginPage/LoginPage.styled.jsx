@@ -1,23 +1,5 @@
 import { Form, Field } from 'formik';
-import { Button } from '@mui/material';
 import styled from 'styled-components';
-
-export const LoginBtn = ({ children }) => {
-  return (
-    <Button
-      type="submit"
-      variant="contained"
-      size="medium"
-      sx={{
-        '&:hover': {
-          boxShadow: 4,
-        },
-      }}
-    >
-      {children}
-    </Button>
-  );
-};
 
 export const LoginForm = styled(Form)`
   display: flex;

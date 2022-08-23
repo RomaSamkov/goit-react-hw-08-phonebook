@@ -7,6 +7,7 @@ import Spiner from 'components/Spinner';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 
@@ -78,6 +79,9 @@ export default function LoginPage() {
               >
                 Log In
               </Button>
+              <Link href="#" variant="body2">
+                {"Don't have an account? Sign Up"}
+              </Link>
             </LoginForm>
           </Formik>
         )}

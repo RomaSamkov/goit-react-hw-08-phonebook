@@ -52,7 +52,7 @@ export default function LoginPage() {
                 <LockOutlinedIcon />
               </Avatar>
               <Typography component="h1" variant="h5">
-                Sign in
+                Log in
               </Typography>
               <Input
                 type="email"
@@ -65,7 +65,7 @@ export default function LoginPage() {
               <Input
                 type="password"
                 name="password"
-                placeholder="password"
+                placeholder="Password"
               ></Input>
               <ErrorMessage name="password">
                 {msg => <ErrorMsg>{msg}</ErrorMsg>}
@@ -76,7 +76,7 @@ export default function LoginPage() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
+                Log In
               </Button>
             </LoginForm>
           </Formik>

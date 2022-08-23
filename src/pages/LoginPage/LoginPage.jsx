@@ -19,6 +19,24 @@ let loginSchema = yup.object().shape({
     .required('Password is required'),
 });
 
+function Copyright(props) {
+  return (
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
 export default function LoginPage() {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(
@@ -86,6 +104,7 @@ export default function LoginPage() {
           </Formik>
         )}
       </Box>
+      <Copyright sx={{ mt: 8, mb: 4 }} />
     </>
   );
 }

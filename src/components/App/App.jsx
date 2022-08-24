@@ -6,7 +6,6 @@ import { authOperations, authSelectors } from 'redux/auth';
 import Header from 'components/Header';
 import PrivateRoute from 'components/PrivateRoute';
 import PublicRoute from 'components/PublicRoute';
-// import { Box } from 'components/Box';
 import { Toaster } from 'react-hot-toast';
 
 const HomePage = lazy(() => import('pages/HomePage'));

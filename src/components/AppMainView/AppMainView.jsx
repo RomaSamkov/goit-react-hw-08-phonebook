@@ -4,7 +4,6 @@ import { Container, Title } from './AppMainView.styled';
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactLIst';
 import Filter from 'components/Filter';
-import { Box } from 'components/Box/Box';
 import Spinner from 'components/Spinner';
 import { useContacts } from 'hooks';
 import { contactsOperations } from 'redux/contacts';
@@ -35,24 +34,22 @@ const AppMainView = () => {
   const filteredContacts = filterContacts();
 
   return (
-    <Box>
-      <Container>
-        <Title>Phonebook</Title>
-        <ContactForm />
+    <Container>
+      <Title>Phonebook</Title>
+      <ContactForm />
 
-        <Title>Contacts</Title>
-        <Box>
-          <Filter value={filter} onChange={handleFilterInput} />
-          <h3>Total contacts: {filteredContacts.length}</h3>
-        </Box>
+      <Title>Contacts</Title>
+      <div>
+        <Filter value={filter} onChange={handleFilterInput} />
+        <h3>Total contacts: {filteredContacts.length}</h3>
+      </div>
 
-        {loader ? (
-          Spinner.threeCircles
-        ) : (
-          <ContactList contacts={filteredContacts} />
-        )}
-      </Container>
-    </Box>
+      {loader ? (
+        Spinner.threeCircles
+      ) : (
+        <ContactList contacts={filteredContacts} />
+      )}
+    </Container>
   );
 };
 

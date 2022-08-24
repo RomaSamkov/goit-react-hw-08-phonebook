@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
+    background-color: rgb(181, 198, 236);
     
   }
 

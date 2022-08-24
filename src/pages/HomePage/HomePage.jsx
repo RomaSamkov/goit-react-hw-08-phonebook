@@ -2,7 +2,7 @@ import { Container, HomeTitle, HomeText } from './HomePage.styled';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Typed from 'typed.js';
 import { motion } from 'framer-motion';
 import image from 'images';
@@ -13,8 +13,8 @@ const HomePage = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Welcome to ContactsBook... '],
-      startDelay: 1200,
+      strings: ['Welcome to PHONEBOOK... '],
+      startDelay: 1000,
       typeSpeed: 60,
       showCursor: false,
     });
@@ -59,12 +59,8 @@ const HomePage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9, delay: 2.2 }}
           >
-            <button as={Link} to="/register" variant="secondary">
-              Sign Up
-            </button>
-            <button as={Link} to="/login" variant="secondary">
-              Sign In
-            </button>
+            <NavLink to="login">Log in</NavLink>
+            <NavLink to="register">Sign Up</NavLink>
           </motion.div>
         )}
       </Container>

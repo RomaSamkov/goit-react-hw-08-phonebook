@@ -21,7 +21,7 @@ const Header = () => {
       <StyledHeader as="header">
         <Container>
           <StyledLink to={routesPath.home}>
-            <Title>Contactsbook</Title>
+            <Title>PHONEBOOK</Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (
             <NavLink to={routesPath.contacts}>Back to ContactBook</NavLink>

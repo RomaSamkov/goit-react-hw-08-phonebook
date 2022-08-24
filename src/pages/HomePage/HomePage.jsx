@@ -1,7 +1,6 @@
 import { Container, HomeTitle, HomeText } from './HomePage.styled';
-// import Confetti from 'components/Confetti';
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Container>
@@ -10,4 +9,6 @@ export default function HomePage() {
       </Container>
     </>
   );
-}
+};
+
+export default HomePage;

@@ -5,6 +5,7 @@ import { authSelectors } from 'redux/auth';
 import { Link } from 'react-router-dom';
 import Typed from 'typed.js';
 import { motion } from 'framer-motion';
+import image from 'images';
 
 const HomePage = () => {
   const el = useRef(null);
@@ -25,7 +26,13 @@ const HomePage = () => {
 
   return (
     <>
-      <Container>
+      <Container
+        style={{
+          backgroundImage: `url(${image})`,
+          backgroundSize: 'cover',
+          height: '100vh',
+        }}
+      >
         <motion.div
           drag
           dragConstraints={{

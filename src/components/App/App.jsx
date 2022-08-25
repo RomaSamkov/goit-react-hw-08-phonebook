@@ -7,6 +7,8 @@ import Header from 'components/Header';
 import PrivateRoute from 'components/PrivateRoute';
 import PublicRoute from 'components/PublicRoute';
 import { Toaster } from 'react-hot-toast';
+import { FadeLoader } from 'react-spinners';
+import { SpinnerContainer } from './App.styled';
 
 const HomePage = lazy(() => import('pages/HomePage'));
 const LoginPage = lazy(() => import('pages/LoginPage'));
@@ -23,7 +25,13 @@ const App = () => {
   }, [dispatch]);
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <SpinnerContainer>
+            <FadeLoader color="rgba(77, 52, 220, 1)" />
+          </SpinnerContainer>
+        }
+      >
         <Routes>
           <Route path={routesPath.home} element={<Header />}>
             <Route

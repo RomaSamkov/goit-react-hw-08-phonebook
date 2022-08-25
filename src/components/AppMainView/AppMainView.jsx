@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import {
   Container,
+  LoaderContainer,
   Title,
   TitleContacts,
   TitlePhonebook,
@@ -9,7 +10,7 @@ import {
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactLIst';
 import Filter from 'components/Filter';
-import Spinner from 'components/Spinner';
+import { FadeLoader } from 'react-spinners';
 import { useContacts } from 'hooks';
 import { contactsOperations } from 'redux/contacts';
 
@@ -48,12 +49,13 @@ const AppMainView = () => {
         <Filter value={filter} onChange={handleFilterInput} />
         <TitleContacts>Total contacts: {filteredContacts.length}</TitleContacts>
       </div>
-
-      {loader ? (
-        Spinner.threeCircles
-      ) : (
-        <ContactList contacts={filteredContacts} />
-      )}
+      <LoaderContainer>
+        {loader ? (
+          <FadeLoader color="rgba(77, 52, 220, 1)" />
+        ) : (
+          <ContactList contacts={filteredContacts} />
+        )}
+      </LoaderContainer>
     </Container>
   );
 };

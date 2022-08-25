@@ -25,3 +25,8 @@ export const TitleContacts = styled.h2`
   padding-top: 20px;
   padding-bottom: 20px;
 `;
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

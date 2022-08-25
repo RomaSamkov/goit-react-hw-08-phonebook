@@ -11,6 +11,9 @@ import Link from '@mui/material/Link';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import toast from 'react-hot-toast';
+import useSound from 'use-sound';
+
+import boopSfx from 'sounds';
 
 let loginSchema = yup.object().shape({
   email: yup.string().email(),
@@ -39,6 +42,7 @@ function Copyright(props) {
 }
 
 export default function LoginPage() {
+  const [play] = useSound(boopSfx);
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(
     authSelectors.getIsFetchingCurrentUser
@@ -95,6 +99,7 @@ export default function LoginPage() {
                 {msg => <ErrorMsg>{msg}</ErrorMsg>}
               </ErrorMessage>
               <Button
+                onClick={play}
                 type="submit"
                 fullWidth
                 variant="contained"

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 
 export const StyledHeader = styled('div')``;
@@ -42,5 +43,23 @@ export const ContactsIcon = styled(ImportContactsIcon)`
   &:hover,
   :focus {
     color: #fff;
+  }
+`;
+export const HeaderLink = styled(NavLink)`
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  /* color: #fff;
+  background-color: rgb(100, 70, 192); */
+  color: #0d6efd;
+  background-color: rgb(221, 216, 236);
+  border-radius: 25px;
+  &:hover,
+  :focus {
+    color: #fff;
+    background-color: rgb(100, 70, 192);
+    /* color: #0d6efd;
+    background-color: rgb(221, 216, 236); */
   }
 `;

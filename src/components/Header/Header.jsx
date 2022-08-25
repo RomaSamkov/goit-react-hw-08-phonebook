@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import {
   Container,
@@ -6,6 +6,7 @@ import {
   StyledLink,
   Title,
   ContactsIcon,
+  HeaderLink,
 } from './Header.styled';
 import AuthNavigation from 'components/AuthNavigation';
 import UserMenu from 'components/UserMenu';
@@ -33,7 +34,9 @@ const Header = () => {
             </Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (
-            <NavLink to={routesPath.contacts}>Back to ContactBook</NavLink>
+            <HeaderLink to={routesPath.contacts}>
+              Back to ContactsBook
+            </HeaderLink>
           )}
           {isFetchingCurrentUser ? (
             Spinner.threeDots

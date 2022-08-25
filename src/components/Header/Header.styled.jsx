@@ -33,5 +33,6 @@ export const Title = styled('h2')`
   &:hover,
   :focus {
     color: #fff;
+    background-color: rgb(100, 70, 192);
   }
 `;

@@ -1,8 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from 'redux/auth';
-
-import LogoutIcon from '@mui/icons-material/Logout';
-import { ImgWrap, Container, Button } from './UserMenu.styled';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import ChromeReaderModeIcon from '@mui/icons-material/ChromeReaderMode';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Account, Container, Button, CustimIcon } from './UserMenu.styled';
 
 const UserMenu = () => {
   const name = useSelector(authSelectors.getUserName);
@@ -10,9 +11,9 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   return (
     <Container>
-      <ImgWrap>
-        <img src="" alt="avatar" />
-      </ImgWrap>
+      <Account>
+        <AccountCircleIcon sx={{ color: '#0d6efd' }} fontSize="large" />
+      </Account>
       <span>Welcome, {name}</span>
       <Button
         type="button"
@@ -20,7 +21,7 @@ const UserMenu = () => {
           dispatch(authOperations.logOut());
         }}
       >
-        <LogoutIcon sx={{ color: 'white' }} />
+        <CustimIcon />
       </Button>
     </Container>
   );

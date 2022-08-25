@@ -1,11 +1,8 @@
 import styled from 'styled-components';
+import LogoutIcon from '@mui/icons-material/Logout';
 
-export const ImgWrap = styled('div')`
-  width: 40px;
-  height: 40px;
+export const Account = styled('div')`
   margin-right: 7px;
-  border-radius: 50%;
-  overflow: hidden;
 `;
 
 export const Container = styled('div')`
@@ -20,9 +17,23 @@ export const Button = styled('button')`
   border: none;
   outline: none;
   border-radius: 50%;
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #0d6efd;
 
   &:hover,
   &:focus {
-    background-color: #fff;
+    color: #fff;
+    background-color: rgb(100, 70, 192);
+  }
+`;
+
+export const CustimIcon = styled(LogoutIcon)`
+  /* color: #0d6efd; */
+  color: #fff;
+  &:hover,
+  :focus {
+    color: #fff;
   }
 `;

@@ -22,7 +22,6 @@ export const StyledLink = styled(Link)`
 
 export const Title = styled('h2')`
   display: flex;
-  justify-content: center;
   align-items: center;
   column-gap: 10px;
   padding: 10px 25px;
@@ -30,6 +29,7 @@ export const Title = styled('h2')`
   margin: 0;
   color: #0d6efd;
   background-color: rgb(221, 216, 236);
+
   &:hover,
   :focus {
     color: #fff;

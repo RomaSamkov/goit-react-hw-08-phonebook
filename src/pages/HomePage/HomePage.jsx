@@ -1,8 +1,15 @@
-import { Container, HomeTitle, HomeText } from './HomePage.styled';
+import {
+  Container,
+  HomeTitle,
+  HomeText,
+  AuthLink,
+  AuthContainer,
+  ContactsLink,
+} from './HomePage.styled';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
-import { Link, NavLink } from 'react-router-dom';
+import routesPath from 'routesPath';
 import Typed from 'typed.js';
 import { motion } from 'framer-motion';
 import image from 'images';
@@ -13,7 +20,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Welcome to PHONEBOOK... '],
+      strings: ['Welcome to PHONEBOOK ! '],
       startDelay: 1000,
       typeSpeed: 60,
       showCursor: false,
@@ -33,35 +40,30 @@ const HomePage = () => {
           height: '100vh',
         }}
       >
-        <motion.div
-          drag
-          dragConstraints={{
-            top: -50,
-            left: -50,
-            right: 50,
-            bottom: 50,
-          }}
-        >
-          <HomeTitle ref={el}></HomeTitle>
-        </motion.div>
+        <HomeTitle ref={el}></HomeTitle>
+
         <HomeText
           as={motion.h1}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.9, delay: 2.5 }}
         >
-          Text .................
+          "Nice moment to look at yours contacts😀!""
         </HomeText>
 
-        {!isLoggedIn && (
+        {!isLoggedIn ? (
           <motion.div
             initial={{ y: -40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9, delay: 2.2 }}
           >
-            <NavLink to="login">Log in</NavLink>
-            <NavLink to="register">Sign Up</NavLink>
+            <AuthContainer>
+              <AuthLink to="login">Log in</AuthLink>
+              <AuthLink to="register">Sign Up</AuthLink>
+            </AuthContainer>
           </motion.div>
+        ) : (
+          <ContactsLink to={routesPath.contacts}>ContactsBook</ContactsLink>
         )}
       </Container>
     </>

@@ -102,7 +102,10 @@ export default function LoginPage() {
               >
                 Log In
               </Button>
-              <Link href="#" variant="body2">
+              <Link
+                href="https://romasamkov.github.io/goit-react-hw-08-phonebook/register"
+                variant="body2"
+              >
                 {"Don't have an account? Sign Up"}
               </Link>
             </LoginForm>

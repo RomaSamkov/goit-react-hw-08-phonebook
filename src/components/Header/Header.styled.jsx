@@ -14,9 +14,6 @@ export const Container = styled('div')`
   box-shadow: 0px 10px 21px -2px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 10px 21px -2px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 21px -2px rgba(0, 0, 0, 0.5);
-  /* -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); */
 `;
 
 export const StyledLink = styled(Link)`
@@ -24,7 +21,10 @@ export const StyledLink = styled(Link)`
 `;
 
 export const Title = styled('h2')`
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
   padding: 10px 25px;
   border-radius: 25px;
   margin: 0;

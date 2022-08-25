@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Container, StyledHeader, StyledLink, Title } from './Header.styled';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 import AuthNavigation from 'components/AuthNavigation';
 import UserMenu from 'components/UserMenu';
 import { authSelectors } from 'redux/auth';
@@ -21,7 +22,10 @@ const Header = () => {
       <StyledHeader as="header">
         <Container>
           <StyledLink to={routesPath.home}>
-            <Title>PHONEBOOK</Title>
+            <Title>
+              PHONEBOOK
+              <ImportContactsIcon sx={{ color: '#0d6efd' }} fontSize="large" />
+            </Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (
             <NavLink to={routesPath.contacts}>Back to ContactBook</NavLink>

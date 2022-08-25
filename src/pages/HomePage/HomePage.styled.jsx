@@ -67,6 +67,8 @@ export const HomeTitle = styled.h1`
   margin: 0;
   color: #0d6efd;
   background-color: rgb(221, 216, 236);
+  /* color: #fff;
+  background-color: rgb(100, 70, 192); */
 `;
 
 export const HomeText = styled('p')`

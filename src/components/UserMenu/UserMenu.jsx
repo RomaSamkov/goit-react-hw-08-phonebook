@@ -1,7 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from 'redux/auth';
-import ImportContactsIcon from '@mui/icons-material/ImportContacts';
-import ChromeReaderModeIcon from '@mui/icons-material/ChromeReaderMode';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Account, Container, Button, CustimIcon } from './UserMenu.styled';
 

@@ -18,9 +18,10 @@ export const Button = styled('button')`
   outline: none;
   border-radius: 50%;
   margin-left: 10px;
-  color: #fff;
+  padding-top: 3px;
+  color: #0d6efd;
   cursor: pointer;
-  background-color: #0d6efd;
+  background-color: rgb(221, 216, 236);
 
   &:hover,
   &:focus {
@@ -30,8 +31,6 @@ export const Button = styled('button')`
 `;
 
 export const CustimIcon = styled(LogoutIcon)`
-  /* color: #0d6efd; */
-  color: #fff;
   &:hover,
   :focus {
     color: #fff;

@@ -9,6 +9,7 @@ import Link from '@mui/material/Link';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { RegForm, RegInput, ErrorMsg } from './RegisterPage.styled';
+import toast from 'react-hot-toast';
 
 let loginSchema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -25,6 +26,10 @@ export default function RegisterPage() {
   const handleSubmit = (value, { resetForm }) => {
     console.log(value);
     dispatch(authOperations.register(value));
+    toast.success('You Registered successfully in Phonebook!', {
+      duration: 3000,
+      position: 'top-center',
+    });
     resetForm();
   };
 

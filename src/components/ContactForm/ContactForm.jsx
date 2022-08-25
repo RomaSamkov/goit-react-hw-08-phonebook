@@ -51,6 +51,10 @@ const ContactForm = () => {
     }
 
     addContact({ name, number: handleFormatPhoneNumber() });
+    toast.success('Contact is added successfully!', {
+      duration: 2000,
+      position: 'top-center',
+    });
     resetForm();
   };
 
@@ -60,7 +64,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
+    <Form onSubmit={handleSubmit}>
       <Label htmlFor={nameId}>
         Name
         <InputName

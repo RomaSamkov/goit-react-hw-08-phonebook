@@ -41,10 +41,14 @@ const ContactListItem = ({ id, name, number }) => {
             contact.id !== id
         )
       ) {
-        toast(`Name ${editedName} exist`);
+        toast.error(`Name ${editedName} exist`);
         return;
       }
       editContact({ id, name: editedName, number: editedNumber });
+      toast.success('Contact is edit successfully!', {
+        duration: 2000,
+        position: 'top-center',
+      });
     }
     setIsEdited(state => !state);
   };

@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
+import toast from 'react-hot-toast';
 
 let loginSchema = yup.object().shape({
   email: yup.string().email(),
@@ -45,6 +46,10 @@ export default function LoginPage() {
 
   const handleSubmit = (value, { resetForm }) => {
     dispatch(authOperations.logIn(value));
+    toast.success('You Log In in Phonebook!', {
+      duration: 3000,
+      position: 'top-center',
+    });
     resetForm();
   };
 

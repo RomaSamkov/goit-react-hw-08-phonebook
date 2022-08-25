@@ -1,6 +1,11 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Container, Title, TitlePhonebook } from './AppMainView.styled';
+import {
+  Container,
+  Title,
+  TitleContacts,
+  TitlePhonebook,
+} from './AppMainView.styled';
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactLIst';
 import Filter from 'components/Filter';
@@ -41,7 +46,7 @@ const AppMainView = () => {
       <Title>Contacts</Title>
       <div>
         <Filter value={filter} onChange={handleFilterInput} />
-        <h3>Total contacts: {filteredContacts.length}</h3>
+        <TitleContacts>Total contacts: {filteredContacts.length}</TitleContacts>
       </div>
 
       {loader ? (

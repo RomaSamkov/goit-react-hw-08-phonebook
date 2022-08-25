@@ -20,3 +20,8 @@ export const TitlePhonebook = styled.h2`
   margin: 0;
   padding-bottom: 20px;
 `;
+export const TitleContacts = styled.h2`
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;

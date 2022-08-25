@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Item, Button, Contact } from './ContactListItem.styled';
+import {
+  Item,
+  Button,
+  Contact,
+  ButtonContainer,
+} from './ContactListItem.styled';
 import { useContacts } from 'hooks';
 import toast from 'react-hot-toast';
 
@@ -69,7 +74,7 @@ const ContactListItem = ({ id, name, number }) => {
           </Contact>
         </>
       )}
-      <div>
+      <ButtonContainer>
         <Button onClick={updateContact}>{isEdited ? 'Save' : 'Edit'}</Button>
         <Button
           disabled={currentId}
@@ -80,7 +85,7 @@ const ContactListItem = ({ id, name, number }) => {
         >
           {loader && currentId ? 'Deleting...' : 'Delete'}
         </Button>
-      </div>
+      </ButtonContainer>
     </Item>
   );
 };

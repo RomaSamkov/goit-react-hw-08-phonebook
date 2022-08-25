@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
-//set Authorization fild with token in requset headers:
 const token = {
   set(token) {
     axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -14,7 +13,6 @@ const token = {
   },
 };
 
-//register user
 const register = createAsyncThunk('auth/register', async credentials => {
   try {
     const { data } = await axios.post('/users/signup', credentials);
@@ -26,7 +24,6 @@ const register = createAsyncThunk('auth/register', async credentials => {
   }
 });
 
-//login user
 const logIn = createAsyncThunk('auth/login', async credentials => {
   try {
     const { data } = await axios.post('/users/login', credentials);
@@ -38,7 +35,6 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
   }
 });
 
-//logOut user
 const logOut = createAsyncThunk('auth/logOut', async () => {
   try {
     await axios.post('/users/logout');
@@ -50,7 +46,6 @@ const logOut = createAsyncThunk('auth/logOut', async () => {
   }
 });
 
-//fetch cuurentUser
 const fetchCurrentUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {

@@ -50,8 +50,6 @@ export const HeaderLink = styled(NavLink)`
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
-  /* color: #fff;
-  background-color: rgb(100, 70, 192); */
   color: #0d6efd;
   background-color: rgb(221, 216, 236);
   border-radius: 25px;
@@ -59,7 +57,5 @@ export const HeaderLink = styled(NavLink)`
   :focus {
     color: #fff;
     background-color: rgb(100, 70, 192);
-    /* color: #0d6efd;
-    background-color: rgb(221, 216, 236); */
   }
 `;

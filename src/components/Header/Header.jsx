@@ -1,7 +1,12 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { Container, StyledHeader, StyledLink, Title } from './Header.styled';
-import ImportContactsIcon from '@mui/icons-material/ImportContacts';
+import {
+  Container,
+  StyledHeader,
+  StyledLink,
+  Title,
+  ContactsIcon,
+} from './Header.styled';
 import AuthNavigation from 'components/AuthNavigation';
 import UserMenu from 'components/UserMenu';
 import { authSelectors } from 'redux/auth';
@@ -24,7 +29,7 @@ const Header = () => {
           <StyledLink to={routesPath.home}>
             <Title>
               PHONEBOOK
-              <ImportContactsIcon sx={{ color: '#0d6efd' }} fontSize="large" />
+              <ContactsIcon fontSize="large" />
             </Title>
           </StyledLink>
           {isHomePath && isLoggedIn && (

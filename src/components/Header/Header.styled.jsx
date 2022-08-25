@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import ImportContactsIcon from '@mui/icons-material/ImportContacts';
 
 export const StyledHeader = styled('div')``;
 
@@ -34,5 +35,12 @@ export const Title = styled('h2')`
   :focus {
     color: #fff;
     background-color: rgb(100, 70, 192);
+  }
+`;
+
+export const ContactsIcon = styled(ImportContactsIcon)`
+  &:hover,
+  :focus {
+    color: #fff;
   }
 `;

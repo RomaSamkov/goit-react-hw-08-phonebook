@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Container, Title } from './AppMainView.styled';
+import { Container, Title, TitlePhonebook } from './AppMainView.styled';
 import ContactForm from 'components/ContactForm';
 import ContactList from 'components/ContactLIst';
 import Filter from 'components/Filter';
@@ -35,7 +35,7 @@ const AppMainView = () => {
 
   return (
     <Container>
-      <Title>Phonebook</Title>
+      <TitlePhonebook>Phonebook</TitlePhonebook>
       <ContactForm />
 
       <Title>Contacts</Title>

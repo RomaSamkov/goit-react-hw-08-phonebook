@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Item, Button } from './ContactListItem.styled';
+import { Item, Button, Contact } from './ContactListItem.styled';
 import { useContacts } from 'hooks';
 import toast from 'react-hot-toast';
 
@@ -63,8 +63,10 @@ const ContactListItem = ({ id, name, number }) => {
         </>
       ) : (
         <>
-          <span>{name}:</span>
-          <span>{number}</span>
+          <Contact>
+            <span>{name}:</span>
+            <span>{number}</span>
+          </Contact>
         </>
       )}
       <div>

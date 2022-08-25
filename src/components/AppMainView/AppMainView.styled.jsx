@@ -12,4 +12,11 @@ export const Container = styled.div`
   opacity: 0.9;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+  margin: 0;
+  padding-top: 20px;
+`;
+export const TitlePhonebook = styled.h2`
+  margin: 0;
+  padding-bottom: 20px;
+`;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Filter = ({ value, onChange }) => (
   <Label>
     Filter:
-    <Input name="filter" value={value} onChange={onChange} />
+    <Input name="filter" type="text" value={value} onChange={onChange} />
   </Label>
 );
 

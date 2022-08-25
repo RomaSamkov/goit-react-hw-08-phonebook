@@ -56,4 +56,5 @@ export const ButtonContainer = styled.div`
   display: flex;
   column-gap: 20px;
   padding-right: 10px;
+  margin-left: 20px;
 `;

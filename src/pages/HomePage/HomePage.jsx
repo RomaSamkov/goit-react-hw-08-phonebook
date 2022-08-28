@@ -6,6 +6,7 @@ import {
   AuthContainer,
   ContactsLink,
 } from './HomePage.styled';
+import GlobalFonts from 'fonts/fonts.styled';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
@@ -41,14 +42,14 @@ const HomePage = () => {
         }}
       >
         <HomeTitle ref={el}></HomeTitle>
-
+        <GlobalFonts />
         <HomeText
           as={motion.h1}
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.9, delay: 2.5 }}
         >
-          "Nice moment to look at yours contacts😀!""
+          "Nice moment to look at yours contacts😀!"
         </HomeText>
 
         {!isLoggedIn ? (

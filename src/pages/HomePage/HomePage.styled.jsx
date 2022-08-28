@@ -61,6 +61,7 @@ export const HomeTitle = styled.h1`
 `;
 
 export const HomeText = styled('p')`
+  font-family: 'LeHavreLayersDblLine';
   color: #f51909;
   margin-top: 50px;
   margin-bottom: 50px;

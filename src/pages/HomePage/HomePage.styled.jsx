@@ -60,7 +60,8 @@ export const HomeTitle = styled.h1`
   background-color: rgb(221, 216, 236);
 `;
 
-export const HomeText = styled('p')`
+export const HomeText = styled.p`
+  padding: 10px 25px;
   font-family: 'LeHavreLayersDblLine';
   color: #f51909;
   margin-top: 50px;
